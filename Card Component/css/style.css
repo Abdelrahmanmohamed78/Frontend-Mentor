@@ -1,0 +1,114 @@
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  /* Gradient Color */
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+body {
+  position: relative;
+  margin: 0;
+  font-family: 'Lexend Deca', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* End Global Rules */
+/* Start Cards */
+.cards {
+  margin: 100px 15px;
+  width: 825px;
+  max-width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.cards .card {
+  flex-basis: calc(100% / 3);
+  padding: 40px;
+  color: white;
+}
+@media (max-width: 992px) {
+  .cards .card {
+    flex-basis: calc(100% / 2);
+  }
+}
+@media (max-width: 767px) {
+  .cards .card {
+    flex-basis: 100%;
+  }
+}
+.cards .card.yellow {
+  background-color: var(--Bright-orange);
+}
+.cards .card.light-green {
+  background-color: var(--Dark-cyan);
+}
+.cards .card.green {
+  background-color: var(--Very-dark-cyan);
+}
+.cards .card h3 {
+  margin: 25px 0;
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', cursive;
+}
+.cards .card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--Transparent-white);
+}
+.cards .card a {
+  display: block;
+  width: fit-content;
+  border: 2px solid white;
+  padding: 10px 25px;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 30px;
+  margin-top: 80px;
+  transition: 0.3s;
+}
+.cards .card a.yellow {
+  color: var(--Bright-orange);
+}
+.cards .card a.light-green {
+  color: var(--Dark-cyan);
+}
+.cards .card a.green {
+  color: var(--Very-dark-cyan);
+}
+.cards .card a:hover {
+  background-color: transparent;
+  color: white;
+}
+/* End Cards */
+/* Start Foooter */
+.attribution { 
+  position: absolute;
+  bottom: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+}
+/* End Foooter */
